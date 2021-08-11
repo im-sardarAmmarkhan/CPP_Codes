@@ -1,4 +1,4 @@
-# GPA Calculator for the University of Kotli
+# GPA Calculator for the University of Kotli  
 Hi :wave: This is the GPA Calculator for the University of Kotli Azad Kashmir.
 ## :star: Provides Following Features :point_down: :
   :heavy_check_mark: Check Percentage of the Subject Marks  
