@@ -1,36 +1,13 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-
-int main()
+float PercentageCalculator(int TotalMarks, int SubjectMarks )
 {
-	
-	int programControl=1;
-	int total_marks;
-	char grade;
-	float total_Gpa;
-	int credithour1,credithour2,credithour3,credithour4,credithour5;
-	float subject1,subject2,subject3,subject4,subject5;
-	int gradescores,Subject_marks;
-	int choice;
-	float percentage;
-	while (programControl==1)
-	{
-	system("cls");
-	cout<<"||    ____________________UOK GPA CALCULATOR________________||"<<endl;
-	cout<<"press 1 to calculate the grade and gpa of subject"<<endl;
-	cout<<"press 2 to calculate the gpa of semester"<<endl;
-	cout<<"||    ______________________________________________________||"<<endl;
-	cin>>choice;
-	switch(choice)
-	{
-		case 1:
-			cout<<"Enter the total marks ="<<endl;
-			cin>>total_marks;
-			cout<<"Enter the obtained marks ="<<endl;
-			cin>>Subject_marks;
-			 percentage =(Subject_marks*100)/total_marks;
-			if(percentage>90)
+	return (SubjectMarks*100)/TotalMarks;
+}
+void Grade_GPA_Calculator(float percentage)
+{
+	if(percentage>90)
 			{
 				cout<<"The grade is A+ and gpa is 4"<<endl;
 			}
@@ -59,6 +36,35 @@ int main()
 			{
 				cout<<"The grade is F and student is fail"<<endl;
 			}
+}
+int main()
+{
+	int programControl=1;
+	int total_marks;
+	char grade;
+	float total_Gpa;
+	int credithour1,credithour2,credithour3,credithour4,credithour5;
+	float subject1,subject2,subject3,subject4,subject5;
+	int gradescores,Subject_marks;
+	int choice;
+	float percentage;
+	while (programControl==1)
+	{
+	system("cls");
+	cout<<"||    ____________________UOK GPA CALCULATOR________________||"<<endl;
+	cout<<"press 1 to calculate the grade and gpa of subject"<<endl;
+	cout<<"press 2 to calculate the gpa of semester"<<endl;
+	cout<<"||    ______________________________________________________||"<<endl;
+	cin>>choice;
+	switch(choice)
+	{
+		case 1:
+			cout<<"Enter the total marks ="<<endl;
+			cin>>total_marks;
+			cout<<"Enter the obtained marks ="<<endl;
+			cin>>Subject_marks;
+			percentage =PercentageCalculator(total_marks, Subject_marks);
+			Grade_GPA_Calculator(percentage);
 			break;
 			case 2:
 				{
